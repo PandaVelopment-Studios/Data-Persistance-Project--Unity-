@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class NameManager : MonoBehaviour
 {
-    
-    public static NameManager Instance;
+
+    public static NameManager Instance { get; private set; } //ENCAPSULATION
 
     public string Name;
 

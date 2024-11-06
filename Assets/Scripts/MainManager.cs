@@ -46,7 +46,7 @@ public class MainManager : MonoBehaviour
             for (int x = 0; x < perLine; ++x)
             {
                 Vector3 position = new Vector3(-1.5f + step * x, 2.5f + i * 0.3f, 0);
-                var brick = Instantiate(BrickPrefab, position, Quaternion.identity);
+                var brick = Instantiate(BrickPrefab, position, Quaternion.identity); //POLYMORPHISM
                 brick.PointValue = pointCountArray[i];
                 brick.onDestroyed.AddListener(AddPoint);
             }
@@ -85,7 +85,7 @@ public class MainManager : MonoBehaviour
 
     public void GameOver()
     {
-        if (isHighScore())
+        if (isHighScore()) //ABSTRACTION
         {
             saveHighScore();
         }
@@ -98,7 +98,7 @@ public class MainManager : MonoBehaviour
         playerName = name;
     }
 
-    public bool isHighScore()
+    public bool isHighScore() //ABSTRACTION
     {
         if (m_Points > m_HighScore)
         {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Brick : MonoBehaviour
+public class Brick : MonoBehaviour //INHERITENCE
 {
     public UnityEvent<int> onDestroyed;
     
